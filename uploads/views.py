@@ -1,6 +1,13 @@
 from django.shortcuts import render, redirect
 
+from uploads.models import DocumentOne, DocumentTwo
 from uploads.forms import DocumentOneForm, DocumentTwoForm
+
+
+def home(request):
+    documents_one = DocumentOne.objects.all()
+    documents_two = DocumentTwo.objects.all()
+    return render(request, 'home.html', {'documents_one': documents_one, 'documents_two': documents_two})
 
 
 def form_one_upload(request):
