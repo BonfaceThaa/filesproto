@@ -23,10 +23,10 @@ def form_one_upload(request):
 
 def form_two_upload(request):
     if request.method == 'POST':
-        form = DocumentOneForm(request.POST, request.FILES)
+        form = DocumentTwoForm(request.POST, request.FILES)
         if form.is_valid():
             form.save()
             return redirect('home')
     else:
-        form = DocumentOneForm()
+        form = DocumentTwoForm()
     return render(request, 'document_two_upload.html', {'form': form})

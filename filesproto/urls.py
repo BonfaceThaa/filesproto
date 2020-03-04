@@ -21,9 +21,9 @@ from django.urls import path
 from uploads import views
 
 urlpatterns = [
-    path('/', views.home, name='home'),
+    path('', views.home, name='home'),
     path('uploads/one', views.form_one_upload, name='document_one'),
-    path('uploads/two', views.form_one_upload, name='document_two'),
+    path('uploads/two', views.form_two_upload, name='document_two'),
     path('admin/', admin.site.urls),
 ]
 

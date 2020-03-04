@@ -10,5 +10,5 @@ class DocumentOneForm(forms.ModelForm):
 
 class DocumentTwoForm(forms.ModelForm):
     class Meta:
-        model = DocumentOne
+        model = DocumentTwo
         fields = ('description', 'document',)
